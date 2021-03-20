@@ -7,7 +7,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-image: radial-gradient(circle, #171424, black);
+  background-color: #F9F9F3;
 }
 
 .face {
@@ -15,106 +15,11 @@ body {
 }
 
 /***************/
-.house {
+.room {
   position: absolute;
   width: 28vw;
   height: 28vw;
   transform: perspective(1250px) rotateX(75deg) rotateZ(45deg) translateZ(-9vw);
-}
-
-.h-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 1.5vw -3vw 3vw black, 1.5vw 0.5vw 1.5vw black;
-}
-
-.h-lights {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 45vw;
-  height: 45vw;
-}
-
-.h-light {
-  position: absolute;
-}
-.h-light:nth-of-type(1) {
-  bottom: 5vw;
-  right: 0;
-  width: 14vw;
-  height: 14vw;
-  border-radius: 50%;
-  background-image: radial-gradient(#1b182a, transparent);
-  filter: blur(1vw);
-}
-.h-light:nth-of-type(2) {
-  bottom: 18vw;
-  right: -1vw;
-  width: 2vw;
-  height: 12vw;
-  border-radius: 50%;
-  transform: rotateZ(-50deg);
-  background-image: radial-gradient(rgba(81, 137, 251, 0.45) 50%, rgba(40, 125, 210, 0.45), transparent);
-  box-shadow: -1vw -1vw 2vw 1vw rgba(131, 171, 252, 0.1);
-  filter: blur(1vw);
-}
-.h-light:nth-of-type(3) {
-  bottom: -2vw;
-  right: 17vw;
-  width: 5vw;
-  height: 12vw;
-  border-radius: 50%;
-  transform: rotateZ(-50deg);
-  background-image: radial-gradient(rgba(81, 137, 251, 0.5) 50%, rgba(40, 125, 210, 0.5), transparent);
-  filter: blur(2vw);
-}
-.h-light:nth-of-type(3)::before, .h-light:nth-of-type(3)::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  top: -6vw;
-  height: 400%;
-  background-image: linear-gradient(to bottom, rgba(40, 125, 210, 0.1), rgba(81, 137, 251, 0.1), transparent);
-  border-top-left-radius: 10vw;
-  border-top-right-radius: 10vw;
-  filter: blur(1.5vw);
-}
-.h-light:nth-of-type(3)::before {
-  right: -50%;
-  transform-origin: top right;
-  transform: rotateZ(15deg);
-  box-shadow: -2vw -2vw 0 rgba(81, 137, 251, 0.075);
-}
-.h-light:nth-of-type(3)::after {
-  left: -50%;
-  transform-origin: top left;
-  transform: rotateZ(-15deg);
-  box-shadow: 2vw -2vw 0 rgba(81, 137, 251, 0.075);
-}
-.h-light:nth-of-type(4) {
-  bottom: 5vw;
-  left: 8vw;
-  width: 28vw;
-  height: 4vw;
-  transform-origin: top left;
-  transform: skewX(58deg);
-  background-image: linear-gradient(to right, rgba(81, 137, 251, 0.075) 10%, transparent 25%, transparent, rgba(0, 0, 0, 0.15));
-  filter: blur(0.25vw);
-}
-.h-light:nth-of-type(6) {
-  bottom: 14vw;
-  right: 2vw;
-  width: 8vw;
-  height: 16vw;
-  transform-origin: bottom left;
-  transform: skewY(49deg);
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
-  filter: blur(0.35vw);
 }
 
 /*# sourceMappingURL=index.css.map */
