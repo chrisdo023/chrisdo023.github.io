@@ -8,7 +8,7 @@ body {
   height: 100vh;
   overflow: hidden;
   background-color: #FFFFFF;
-  background-image: radial-gradient(circle, #171424, black);
+  background-image: radial-gradient(circle, #171424, #996633);
 }
 
 .face {
