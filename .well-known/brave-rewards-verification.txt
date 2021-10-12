@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: christopher-do.com
+Token: b1bb99cbd0e683397f8ea0b2e7024b08f3e120ca7ab13ce98bf76dcd85d446a2
