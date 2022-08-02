@@ -7,6 +7,30 @@ a:active { text-decoration: none; }
 html, body {
   font-family:'Courier New', Courier, monospace;
   font-size: 18px;
+  color: black;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 150px;
+}
+
+footer {
+  height: 100px;
 }
 
 /* header */
@@ -27,7 +51,7 @@ html, body {
 }
 
 .navigation-tabs-container {
-  top: 25px;
+  top: 40px;
   right: 20px;
   position: absolute;
 }
@@ -66,12 +90,55 @@ html, body {
   transform: translateX(0px);
 }
 
+.newsletter-tab {
+  margin-top: 3px;
+}
+
+.newsletter-tab:before {
+  content: "[";
+  margin-right: 10px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.newsletter-tab:after {
+  content: "]";
+  margin-left: 10px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.newsletter-tab:hover:before,
+.newsletter-tab:hover:after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
 .time-container {
-  margin-top: 20px;
+  margin-top: 50px;
   padding-left: 20px;
+  cursor: default;
 }
 
 /* main */
+.main {
+  margin-top: 100px;
+}
+
 .images-container {
   top: 45%;
   left: 50%;
@@ -81,18 +148,12 @@ html, body {
 
 /* footer */
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  margin-top: 20px;
 }
 
-.social-media-container {
-  position: absolute;
-  margin-top: 50px;
+.social-media-container, .designed-by {
   margin-left: 20px;
-  width: 150px;
   text-align: left;
-  color: black;
   font-size: 18px;
   bottom: 30px;
   left: 0;
@@ -115,15 +176,6 @@ html, body {
 .contactus-tag:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-
-.designed-by {
-  color: black;
-  position: absolute;
-  bottom: 30px;
-  right: 0;
-  text-align: right;
-  padding-right: 20px;
 }
 
 /* position */

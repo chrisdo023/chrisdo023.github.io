@@ -23,11 +23,6 @@ textarea:focus, input:focus { outline: none; }
 }
 
 /* contactus-main */
-.main {
-    height: 500px;
-    width: 100%;
-}
-
 .contactus-container {
     position: relative;
     padding-left: 20px;
@@ -97,13 +92,6 @@ textarea:focus, input:focus { outline: none; }
     margin-top: 20px;
     font-size: 18px;
     font-family:'Courier New', Courier, monospace;
-}
-
-.inquiry-box:focus {
-    border: thin #c7d3d6 solid;
-    outline: 0 !important;
-    padding: 0;
-    margin: 0;
 }
 
 .inquiry-submit:hover {
