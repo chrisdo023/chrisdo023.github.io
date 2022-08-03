@@ -1,0 +1,17 @@
+/* caffeinated styling links */
+textarea {
+    border: none;
+    resize: none;
+}
+
+textarea:focus, input:focus { outline: none; }
+
+/* caffeinated header */
+.secret {
+    height: 500px;
+    width: 100%;
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+    border-radius: 5px;
+    display: inline-block;
+}
