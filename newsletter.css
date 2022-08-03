@@ -79,3 +79,7 @@ textarea:focus, input:focus { outline: none; }
   font-size: 18px;
   font-family:'Courier New', Courier, monospace;
 }
+
+.newsletter-submit:hover {
+  background-color: #4C4C4C;
+}
