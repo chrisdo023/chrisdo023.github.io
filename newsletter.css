@@ -80,6 +80,6 @@ textarea:focus, input:focus { outline: none; }
   font-family:'Courier New', Courier, monospace;
 }
 
-.newsletter-submit:hover {
+.shopping-submit:hover {
   background-color: #4C4C4C;
 }

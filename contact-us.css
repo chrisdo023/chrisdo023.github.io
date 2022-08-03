@@ -97,3 +97,18 @@ textarea:focus, input:focus { outline: none; }
 .inquiry-submit:hover {
     background-color: #4C4C4C;
 }
+
+.shopping-submit {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.shopping-submit:hover {
+    background-color: #4C4C4C;
+}
