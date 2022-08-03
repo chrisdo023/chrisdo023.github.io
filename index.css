@@ -128,8 +128,14 @@ footer {
   transform: translateX(0px);
 }
 
-.time-container {
+.new-release {
+  padding-left: 20px;
   margin-top: 50px;
+  cursor: default;
+}
+
+.time-container {
+  margin-top: 3px;
   padding-left: 20px;
   cursor: default;
 }

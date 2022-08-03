@@ -1,12 +1,3 @@
-.newsletter-tab {
-    font-weight: bold;
-}
-
-.newsletter-tab:hover:before,
-.newsletter-tab:hover:after {
-  opacity: 0;
-}
-
 /* styling links */
 input {
   border-radius: 5px;
@@ -29,6 +20,22 @@ textarea {
 textarea:focus, input:focus { outline: none; }
 *:focus {
   outline: none;
+}
+
+/* newsletter-header */
+.newsletter-tab {
+  font-weight: bold;
+}
+
+.newsletter-tab:hover:before,
+.newsletter-tab:hover:after {
+opacity: 0;
+}
+
+.time-container {
+  margin-top: 50px;
+  padding-left: 20px;
+  cursor: default;
 }
 
 /* newsletter-main */

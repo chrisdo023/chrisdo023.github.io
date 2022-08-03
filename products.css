@@ -3,6 +3,13 @@ section {
   text-align: center;
 }
 
+/* header */
+.time-container {
+  margin-top: 50px;
+  padding-left: 20px;
+  cursor: default;
+}
+
 /* main */
 .container {
   display: table;

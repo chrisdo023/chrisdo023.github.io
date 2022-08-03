@@ -22,6 +22,13 @@ textarea:focus, input:focus { outline: none; }
     outline: none;
 }
 
+/* contactus-header */
+.time-container {
+    margin-top: 50px;
+    padding-left: 20px;
+    cursor: default;
+  }
+
 /* contactus-main */
 .contactus-container {
     position: relative;
@@ -96,6 +103,17 @@ textarea:focus, input:focus { outline: none; }
 
 .inquiry-submit:hover {
     background-color: #4C4C4C;
+}
+
+.inquirysubmitted-container {
+    position: relative;
+    padding-left: 20px;
+    width: 1000px;
+    margin-top: 250px;  
+}
+
+.inquirysubmitted-desc {
+    margin-top: 40px;
 }
 
 .shopping-submit {
