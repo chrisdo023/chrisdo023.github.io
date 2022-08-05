@@ -27,13 +27,16 @@ class Carousel {
 
   // Update the current order of the carouselArray and gallery
   setCurrentState(direction) {
-
     if (direction.className == 'gallery-controls-previous') {
       this.carouselArray.unshift(this.carouselArray.pop());
+      console.log(this.carouselArray[2].id);
     } else if(direction.className == 'gallery-controls-next') {
       this.carouselArray.push(this.carouselArray.shift());
+      console.log(this.carouselArray[2].id);
     }
-    
+
+    document.getElementById("product-label").innerText = this.carouselArray[2].id;
+
     this.updateGallery();
   }
 
@@ -76,3 +79,4 @@ const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryCont
 exampleCarousel.setControls();
 // exampleCarousel.setNav();
 exampleCarousel.useControls();
+

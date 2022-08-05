@@ -142,7 +142,7 @@ footer {
 
 /* main */
 .main {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .images-container {
@@ -157,12 +157,13 @@ footer {
   margin-top: 20px;
 }
 
-.social-media-container, .designed-by {
+.social-media-container {
   margin-left: 20px;
   text-align: left;
   font-size: 18px;
   bottom: 30px;
   left: 0;
+  width: 125px;
 }
 
 .etsy-tag, .instagram-tag, .contactus-tag {

@@ -49,6 +49,12 @@ section {
   margin-top: 15px;
 }
 
+.product-label {
+  text-align: center;
+  color: black !important;
+  margin-top: 20px;
+}
+
 .buy-now {
   left: 0;
   margin-top: 125px;
