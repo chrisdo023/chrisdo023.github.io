@@ -2,12 +2,14 @@ const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
 const galleryControls = ['previous','', 'next'];
 const galleryItems = document.querySelectorAll('.gallery-item');
+const itemCount = 1;
 
 class Carousel {
-  constructor(container, items, controls) {
+  constructor(container, items, controls, count) {
     this.carouselContainer = container;
     this.carouselControls = controls;
     this.carouselArray = [...items];
+    this.carouselCount = count;
   }
 
   // Update css classes for gallery
@@ -29,26 +31,32 @@ class Carousel {
   setCurrentState(direction) {
     if (direction.className == 'gallery-controls-previous') {
       this.carouselArray.unshift(this.carouselArray.pop());
+      this.setItemCount(-1);
       console.log(this.carouselArray[2].id);
     } else if(direction.className == 'gallery-controls-next') {
       this.carouselArray.push(this.carouselArray.shift());
+      this.setItemCount(1);
       console.log(this.carouselArray[2].id);
     }
 
+    document.getElementById("item").innerText = this.carouselArray[2].id
     document.getElementById("product-label").innerText = this.carouselArray[2].id;
 
     this.updateGallery();
   }
 
-  // Construct the carousel navigation
-  // setNav() {
-    // galleryContainer.appendChild(document.createElement('ul')).className = 'gallery-nav';
+  // Update the item-count on products.html
+  setItemCount(iter) {
+    this.carouselCount += iter;
 
-    // this.carouselArray.forEach(item => {
-    //   const nav = galleryContainer.lastElementChild;
-    //   nav.appendChild(document.createElement('li'));
-    // }); 
-  // }s
+    if(this.carouselCount == 6 && this.carouselCount % 6 == 0){
+      this.carouselCount = 1;
+    } else if(this.carouselCount == 0 && this.carouselCount % 6 == 0){
+      this.carouselCount = 5;
+    }
+
+    document.getElementById("count").innerText = "[" + this.carouselCount + "/5]"
+  }
 
   // Construct the carousel controls
   setControls() {
@@ -68,15 +76,12 @@ class Carousel {
         e.preventDefault();
 
         this.setCurrentState(control);
-
       });
     });
   }
 }
 
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls, itemCount);
 
 exampleCarousel.setControls();
-// exampleCarousel.setNav();
 exampleCarousel.useControls();
-

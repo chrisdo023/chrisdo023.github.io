@@ -4,8 +4,8 @@ section {
 }
 
 /* header */
-.time-container {
-  margin-top: 50px;
+.time-container, .item-count {
+  margin-top: 3px;
   padding-left: 20px;
   cursor: default;
 }

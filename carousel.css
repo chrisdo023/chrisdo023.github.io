@@ -25,7 +25,7 @@
   }
   
   .gallery-item-1 {
-    left: 0%;
+    left: 500%;
     opacity: .4;
     transform: translateX(-50%);
   }
@@ -39,7 +39,7 @@
   }
   
   .gallery-item-2 {
-    left: -25%;
+    left: -500%;
     transform: translateX(-50%);
   }
   
@@ -54,12 +54,12 @@
   }
   
   .gallery-item-4 {
-    left: 125%;
+    left: 500%;
     transform: translateX(-50%);
   }
   
   .gallery-item-5 {
-    left: 100%;
+    left: 500%;
     opacity: .4;
     transform: translateX(-50%);
   }
