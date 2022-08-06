@@ -1,8 +1,21 @@
 /* styling links */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   font-family:'Courier New', Courier, monospace;
-  font-size: 18px;
   color: black;
+  background-color: #FFF9F2;
+}
+
+a:link { text-decoration: none; color: black; }
+a:visited { text-decoration: none; color: black; }
+a:hover { text-decoration: none; cursor: pointer; }
+a:active { text-decoration: none; }
+
+img {
+  border-radius: 50%;
 }
 
 .wrapper {
@@ -21,9 +34,150 @@ body {
 }
 
 header {
-  height: 150px;
+  height: 5vh;
+  width: 100vw;
 }
 
 footer {
-  height: 100px;
+  height: 10vh;
+}
+
+/* index header */
+.header {
+  margin-top: 2vh;
+}
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+  position: relative;
+}
+
+.row {
+  text-align: center;
+  height: 100%;
+  margin: 0 20vw 0vw  20vw;
+}
+
+.aboutme:hover, .education:hover, .project:hover, .contactme:hover, .caffeinated:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* index main */
+.container {
+  display: table;
+  width: 800px;
+  height: 300px;
+}
+
+.left-half {
+  position: absolute;
+  left: 0px;
+  width: 40%;
+  text-align: center;
+}
+
+.right-half {
+  position: absolute;
+  right: 0px;
+  width: 60%;
+  height: 100%;
+  padding-left: 25px;
+}
+
+.section-1, .section-2, .section-3, .section-4, .section-5 {
+  height: 100vh;
+  position: relative;
+}
+
+.name-label {
+  top: 30%;
+  position: absolute;
+  font-size: 50px;
+  font-family: 'Arial Rounded MT Bold', 'Courier New', Courier;
+  text-align: left;
+}
+
+.title-label {
+  top: 51%;
+  position: absolute;
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  text-align: left;
+}
+
+.arrow {
+  bottom: 5vh;
+  left: 50%;
+  margin-bottom: 30px;
+  display: flex;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.aboutmecontainer, .educationcontainer, .projectcontainer, .contactmecontainer {
+  width: 750px;
+}
+
+.aboutmelabel, .educationlabel, .projectlabel, .contactmelabel {
+  text-decoration: underline;
+}
+
+.return {
+  bottom: 2vh;
+  left: 50vw;
+  display: flex;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  cursor: pointer;
+}
+
+.return:hover {
+  text-decoration: underline;
+}
+
+/* aesthetics */
+.center {
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+.off-center {
+  top: 42.5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+.center-column {
+  top: 50%;
 }
