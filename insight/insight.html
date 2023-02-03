@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="insight.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!-- Main -->
+        <main class="main" style="padding-top: 15%;">
+            <section class="fylo-options glass-morphism">
+              <article class="option-icons">
+                <label class="logo">
+                    <i class="fa-solid fa-chart-simple" style="transform: scale(3); color: white;"></i>
+                </label>
+                <span class="text-3xl ml-7 font-bold">Insight</span>
+              </article>
+              <article class="option-icons">
+                <label title="Upload file">
+                    <input class="text-sm cursor-pointer w-36 hidden" type="file" id="fileinput" multiple />
+                    <div class="text bg-indigo-600 text-white rounded font-semibold cursor-pointer hover:bg-indigo-500">
+                        <i class="fas fa-file"></i>
+                    </div>
+                </label>
+                <div style="width: 200px; cursor: not-allowed;" onclick="process()" id="process-btn">
+                    <svg aria-hidden="true" class="w-6 h-6 mr-2.5 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600 hidden" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg" id="process">
+                        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                    </svg>
+                    Process
+                </div>
+              </article>
+            </section>
+            <section class="info glass-morphism">
+              <p id="status-notif">To begin, start uploading the Followers.json and Following.json files</p>
+              
+              <div class="storage-info">
+                <div class="progress">
+                  <span class="bar-progress" id="bar"></span>
+                </div>
+                <div class="legend">
+                  <span class="start">0%</span>
+                  <span class="start">100%</span>
+                </div>   
+              </div>
+            </section>
+        </main>
+
+        <!-- Result  -->
+        <div class="flex flex-row lg:mx-80 md:mx-72 mx-28 lg:mt-6 mt-6 text-center gap-6 container justify-items-center justify-center items-center" style="width: auto;" id="result"></div>
+
+        <!-- How to Get Started & FAQ -->
+        <div class="hidden flex flex-col p-4 lg:mx-80 md:mx-72 mx-28 mt-6 pb-6 text-center h-auto w-auto glass-morphism" id="how-to">
+            <strong>How To Get Started</strong>
+            <p>Follow this <a href="https://www.instagram.com/download/request/"><strong>link</strong></a> to get started on getting your files. Follow the prompt and make sure to select JSON.</p>
+            <p>We know it says it may take up to 14 days to get your files, but you should receive the link in a couple of minutes. Download it and Go to Folder > followers_and_following and there you should see the two files you need.</p>
+        </div>
+        <div class="hidden flex flex-col p-4 lg:mx-80 md:mx-72 mx-28 mt-6 pb-6 text-center h-auto w-auto glass-morphism" id="faq">
+            <strong>FAQ</strong>
+            <p> <strong>I already have an app for this, what's so different about this?</strong> When you log into a third-party service with your username and password, you don't know what sort of malicious activities could be happening behind the scenes. Privacy is something we really value and with Insight we promise no usernames, passwords, or data are stored anywhere. </p>
+            <p> <strong>What does open-source mean?</strong> Insight is an open-source project, where anyone can access and review the <strong><a href="https://github.com/chrisdo023/chrisdo023.github.io" target="_blank">code</a></strong>. The reason we want this project to be open-sourced is to build trust with you all!</p>
+            <!-- <p> <strong>Why are there ads?</strong> Insight is a growing project and personally, I have bills to pay.</p> -->
+        </div>
+        
+        <!-- Footer -->
+        <footer class="attribution">
+            <div class="flex flex-row lg:mx-80 md:mx-72 mx-28 lg:mt-6 mt-6 pb-3 text-center gap-6 container justify-items-center justify-center items-center" style="width: auto;" id="result">
+                <a class="w-32 cursor-pointer" id="toggle-faq">FAQ</a>
+                <a class="w-auto cursor-pointer" id="toggle-how-to">How to get started?</a>
+            </div>
+
+            Coded by <a href="https://github.com/chrisdo023" target="_blank">Chris Do</a>. 
+          </footer>
+        <script src="insight.js"></script>
+    </body>
+</html>
