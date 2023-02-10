@@ -1,6 +1,11 @@
 // Temporarily stores JSON data
 var data = {};
 
+// Confetti animation
+const button = document.querySelector('#button');
+const canvas = document.querySelector('#confetti');
+const jsConfetti = new JSConfetti();
+
 $('#fileinput').change(function(){
     var props=$('#fileinput').prop('files');
 
@@ -47,6 +52,7 @@ function read(file) {
 async function process() {
     // Empty all results
     $("#result").empty();
+    $("#result-count").empty();
 
     var followersData = []
     var followingData = []
@@ -63,7 +69,7 @@ async function process() {
         for (var i = 0; i < followersArray.length; i++) {
             followersData.push(followersArray[i].string_list_data[0].value)
         }
-        await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (2500 - 1000 + 1) + 1000)));
+        await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (2250 - 1000 + 1) + 1000)));
 
         // Extract following's username
         document.getElementById("status-notif").innerHTML = "Extracting followings";
@@ -72,24 +78,25 @@ async function process() {
         for (var i = 0; i < followingArray.length; i++) {
             followingData.push(followingArray[i].string_list_data[0].value)
         } 
-        await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (2500 - 1000 + 1) + 1000)));
+        await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (2250 - 1000 + 1) + 1000)));
 
         // Output difference
         document.getElementById("status-notif").innerHTML = "Finalizing results";
         document.getElementById("bar").style.width = Math.floor(Math.random() * (95 - 85 + 1) + 85) + "%";
         let difference = followingData.filter(x => !followersData.includes(x));
-        await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (2500 - 1000 + 1) + 1000)));
+        await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (2250 - 1000 + 1) + 1000)));
         document.getElementById("process").classList = "w-6 h-6 mr-2.5 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600 hidden";
 
         document.getElementById("bar").style.width = "100%"
-        document.getElementById("status-notif").innerHTML = "Done - Results are below";
+        document.getElementById("status-notif").innerHTML = "<strong>Done</strong> - Results are below";
+        await new Promise(resolve => setTimeout(resolve, 500));
 
         console.log(difference)
         var result = document.getElementById("result")
         for (let item = 0; item < difference.length; item++){
             let container = document.createElement("a");
             container.href = "https://instagram.com/" + difference[item];
-            container.classList = "w-auto rounded-full h-12 basis-0 item";
+            container.classList = "w-auto rounded-full h-12 basis-0 item fade-in";
             container.style = "background-color: #F36A3E; flex: 1 1 18%";
             container.target = "_blank";
 
@@ -102,5 +109,9 @@ async function process() {
 
             result.appendChild(container);
         }
+
+        document.getElementById("result-count").innerHTML = "<strong>Total - " + difference.length + "</strong>";
+        
+        jsConfetti.addConfetti();
     }
 }
