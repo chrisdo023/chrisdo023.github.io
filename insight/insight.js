@@ -33,7 +33,7 @@ function read(file) {
         if (file.name === "following.json") {
             data.followingJson = JSON.parse(e.target.result)
             document.getElementById("status-notif").innerHTML = "Successfully uploaded <strong>Following.json</strong>";
-        } else if(file.name === "followers.json") {
+        } else if(file.name === "followers_1.json") {
             data.followersJson = JSON.parse(e.target.result)
             document.getElementById("status-notif").innerHTML = "Successfully uploaded <strong>Followers.json</strong>";
         } else {
