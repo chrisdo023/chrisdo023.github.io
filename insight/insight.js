@@ -61,7 +61,7 @@ async function process() {
     if ((data.followersJson) && (data.followingJson)){
         document.getElementById("process").classList = "w-6 h-6 mr-2.5 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600";
 
-        var followersArray = data.followersJson.relationships_followers
+        var followersArray = data.followersJson
 
         // Extract followers' username
         document.getElementById("status-notif").innerHTML = "Extracting followers";
